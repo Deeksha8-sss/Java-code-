@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public int reverse(int n,int rev){
+        if(n==0){
+            return rev;
+            } else{
+            return  reverse(n/10,rev*10+n%10);
+        }
+    }
+    public static void main(String[]agrs){
+        Scanner sc=new Scanner(System.in);
+        Main obj=new Main();
+        int n=sc.nextInt();
+        System.out.println(obj.reverse(n,0));
+    }
+}
